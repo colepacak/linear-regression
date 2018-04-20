@@ -10,7 +10,6 @@ theta_one = [-10:0.1:10];
 J = zeros(length(theta_one), 1);
 
 % Calcuate cost and plot results
-
 for i = 1:length(theta_one)
   theta = theta_one(i);
   h = x * theta;
@@ -18,6 +17,6 @@ for i = 1:length(theta_one)
   J(i) = (1 / (2 * m)) * sum(error.^2);
 end
 
-hold on;
-plot(theta_one, J);
-hold off;
+figure
+plot(theta_one, J)
+set(gca,'XTick',0:1:10)
